@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const empSchema = new mongoose.Schema({
-    rollno:{
+    empno:{
         type:Number,
         require:true
     },
@@ -13,7 +13,7 @@ const empSchema = new mongoose.Schema({
         type:String,
         require:false
     },
-    fees:{
+    salary:{
         type:Number,
         require:true
     }

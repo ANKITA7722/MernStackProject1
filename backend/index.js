@@ -1,10 +1,10 @@
 const express = require("express");
  const app = express();
- const mongoose = require("mongoose");
+  const mongoose = require("mongoose");
 
-//  mongoose.connect("mongodb://127.0.0.1:27017/ankitaji").then(()=>{
-//          console.log("DB succesfully Connected")
-//      });
+ mongoose.connect("mongodb://127.0.0.1:27017//nikita").then(()=>{
+         console.log("DB succesfully Connected")
+     });
     
 
  app.listen(8000, () => {

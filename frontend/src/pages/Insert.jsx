@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import axios from 'axios';  // Ensure axios is imported
-import { toast } from 'react-toastify';  // Assuming react-toastify for notifications
+
 
 const Insert = () => {
     const [input, setInput] = useState({});
@@ -26,7 +26,6 @@ const Insert = () => {
             })
             .catch((error) => {
                 console.error("There was an error saving the data!", error);
-                toast.error("Failed to save data.");
             });
     };
 
@@ -34,7 +33,7 @@ const Insert = () => {
         <div className="container">
             <h1>Insert Employee Details</h1>
 
-            <Form onSubmit={handleSubmit}> {/* Use onSubmit for form submission */}
+            <Form > 
                 <Form.Group className="mb-3" controlId="formEmpNo">
                     <Form.Label>Employee No.</Form.Label>
                     <Form.Control
@@ -75,9 +74,7 @@ const Insert = () => {
                     />
                 </Form.Group>
 
-                <button type="submit" className="btn btn-primary">
-                    Save
-                </button>
+                <button onSubmit={handleSubmit}>Save</button>
             </Form>
         </div>
     );
