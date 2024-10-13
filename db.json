@@ -27,7 +27,13 @@
       "name": "khushbu",
       "city": "riva",
       "salary": "222222"
+    },
+    {
+      "id": "7870",
+      "empno": "666",
+      "name": "Ankita bobde",
+      "city": "panna",
+      "salary": "250000"
     }
-    
   ]
 }

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import Table from 'react-bootstrap/Table'
+
 const Display = () => {
   const [mydata, setMydata] = useState([]);
 
@@ -15,37 +17,34 @@ const Display = () => {
       console.log("server not Found");
     }
   };
-
   useEffect(() => {
     loadData();
   }, []);
 
   const ans = mydata.map((key) => {
     return (
-      
-        <tr>
+
+      <tr>
         <td>{key.empno}</td>
         <td>{key.name}</td>
         <td>{key.city}</td>
         <td>{key.salary}</td>
       </tr>
-    
+
     );
   });
 
   return (
     <>
-  
-      <table border={2}>
-          <tr>
-            <th>empno</th>
-            <th>name</th>
-            <th>city</th>
-            <th>salary</th>
-          </tr>
+      <Table striped bordered hover size="sm">
+        <tr>
+          <th>Employee no</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Salary</th>
+        </tr>
         {ans}
-      </table>
-    
+      </Table>
     </>
   );
 };
