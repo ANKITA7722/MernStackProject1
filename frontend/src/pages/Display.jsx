@@ -22,17 +22,20 @@ const Display = () => {
 
   const ans = mydata.map((key) => {
     return (
+      
         <tr>
         <td>{key.empno}</td>
         <td>{key.name}</td>
         <td>{key.city}</td>
         <td>{key.salary}</td>
       </tr>
+    
     );
   });
 
   return (
     <>
+  
       <table border={2}>
           <tr>
             <th>empno</th>
@@ -42,6 +45,7 @@ const Display = () => {
           </tr>
         {ans}
       </table>
+    
     </>
   );
 };
