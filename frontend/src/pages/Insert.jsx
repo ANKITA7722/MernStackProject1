@@ -8,22 +8,22 @@ import { ToastContainer, toast } from 'react-toastify';
 const Insert = () => {
     const [input, setInput] = useState({});
 
-    // Handles input changes for form fields
+   
     const handleInput = (e) => {
         const { name, value } = e.target;
         setInput((values) => ({ ...values, [name]: value }));
         console.log(input);
     };
 
-    // Handles form submission
+   
     const handleSubmit = (e) => {
-        e.preventDefault();  // Prevent default form submission
-        const api = "http://localhost:3000/employee";  // API endpoint
+        e.preventDefault();  
+        const api = "http://localhost:3000/employee"; 
 
         axios.post(api, input)
             .then((res) => {
                 console.log(res);
-                toast.success("Data successfully saved!");  // Use alert if toast is not set up
+                toast.success("Data successfully saved!");  
             })
             .catch((error) => {
                 console.error("There was an error saving the data!", error);
@@ -35,7 +35,7 @@ const Insert = () => {
         <div className="container">
             <h1>Insert Employee Details</h1>
 
-            <Form onSubmit={handleSubmit}>  {/* Attach onSubmit to Form */}
+            <Form>  
                 <Form.Group className="mb-3" controlId="formEmpNo">
                     <Form.Label>Employee No.</Form.Label>
                     <Form.Control
@@ -76,7 +76,7 @@ const Insert = () => {
                     />
                 </Form.Group>
 
-                <button type="submit">Save</button>
+                <button onClick={handleSubmit}>Save</button>
                 <ToastContainer />
             </Form>
         </div>

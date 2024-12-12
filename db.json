@@ -34,6 +34,13 @@
       "name": "Ankita bobde",
       "city": "panna",
       "salary": "250000"
+    },
+    {
+      "id": "6755",
+      "empno": "1",
+      "name": "Ankita",
+      "city": "Bhopal",
+      "salary": "65000"
     }
   ]
 }
